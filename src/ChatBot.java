@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class ChatBot {
+    Scanner scan = new Scanner(System.in);
+
 
     // instance variables
     private String name;
@@ -35,6 +39,19 @@ public class ChatBot {
         System.out.println("That is " + distance + " away from your number!");
     }
 
+    // method that returns the current season
+    public String getSeason() {
+        System.out.println("What season is it right now? (type one: autumn, winter, summer, springtime");
+        String season = scan.nextLine();
+        return season;
+    }
+
+    // method that prints out a haiku
+    public void haiku(String season) {
+        System.out.println("The time is quiet");
+        System.out.println("The season of " + season + " here");
+        System.out.println("Wishing happy dreams");
+    }
     // method that adds and returns the sum of three numbers
     public int addNumbers(int num1, int num2, int num3) {
         return num1 + num2 + num3;
